@@ -1,0 +1,14 @@
+import { Stack } from 'expo-router'
+import React from 'react'
+import { ThemeProvider } from '@/context/theme.context'
+
+export default function _layout() {
+  return (
+<ThemeProvider>
+    <Stack screenOptions={{headerShown: false}}>
+        <Stack.Screen name="index" />
+        <Stack.Screen name="(routes)/onboarding/index" />
+    </Stack>
+</ThemeProvider>
+  )
+}
