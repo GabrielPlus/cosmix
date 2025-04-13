@@ -9,7 +9,6 @@ import { scale } from 'react-native-size-matters';
 
 export default function HomeScreen() {
     const { theme } = useTheme();
-    const [notificationLength, setnotificationLength] = useState(0);
 
     return (
         <>

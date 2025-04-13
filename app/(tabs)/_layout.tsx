@@ -62,9 +62,9 @@ export default function _layout() {
               : false,
           headerTitle:
             route.name === "tab1/index"
-              ? "Courses"
+              ? "spa"
               : route.name === "tab2/index"
-              ? "Video Lessons"
+              ? "massage"
               : "",
           headerTitleStyle: {
             color: theme.dark ? "#fff" : "#000",

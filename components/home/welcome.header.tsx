@@ -1,13 +1,15 @@
 import { View, StyleSheet, Text, Pressable, StatusBar } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
 import { useTheme } from '@/context/theme.context'
 import { LinearGradient } from 'expo-linear-gradient';
-import { fontSizes, IsAndroid, IsHaveNotch, IsIPAD } from '@/themes/app.constant';
+import { fontSizes, IsAndroid, IsHaveNotch, IsIPAD, windowHeight, windowWidth } from '@/themes/app.constant';
 import { moderateScale, scale, verticalScale } from 'react-native-size-matters';
 import { Ionicons } from '@expo/vector-icons';
 
 export default function WelcomeHeader() {
     const { theme } = useTheme();
+    const [notificationLength, setnotificationLength] = useState(0);
+
 
     return (
         <LinearGradient
@@ -44,6 +46,19 @@ export default function WelcomeHeader() {
                         size={scale(25)}
                         color={"#fff"}
                         />
+                        <View
+                        style={[
+                            styles.dot,{
+                                position: "absolute",
+                                right: windowWidth(15),
+                                top: windowHeight(10),
+                            },
+                        ]}
+                        >
+                        <Text style={{fontSize: fontSizes.FONT14, color:"#fff"}}>
+                        {notificationLength}
+                        </Text>
+                        </View>
                     </View>
                 </Pressable>
             </View>
@@ -65,6 +80,14 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: moderateScale(40),
         paddingTop: IsAndroid ? verticalScale(10) : verticalScale(0),
     },
+    dot: {
+        width: scale(13),
+        height: scale(13),
+        backgroundColor: "#19C964",
+        borderRadius: scale(100),
+        alignItems: "center",
+        justifyContent: "center",
+      },
     notificationWrapper: {
         position: "relative",
         width: scale(45),
