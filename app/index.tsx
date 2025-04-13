@@ -23,7 +23,7 @@ export default function Index() {
       {loading ? (
         <></>
       ) : (
-        <Redirect href={!loggedInUser ? "/(routes)/onboarding" : "/(tabs)/index"} />
+        <Redirect href={!loggedInUser ? "/_sitemap" : "/(tabs)/index"} />
       )}
     </>
   );

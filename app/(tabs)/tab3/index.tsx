@@ -1,10 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-export default function Tav() {
+export default function index() {
   return (
     <View>
-      <Text>Home</Text>
+      <Text>index</Text>
     </View>
   )
 }
