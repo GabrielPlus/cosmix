@@ -57,13 +57,13 @@ export default function _layout() {
           tabBarActiveTintColor: theme.colors ? "#fff" : "#f58d42",
           tabBarInactiveTintColor: theme.dark ? "#000" : "#000",
           headerShown:
-            route.name === "courses/index" || route.name === "resources/index"
+            route.name === "tab1/index" || route.name === "tab2/index"
               ? true
               : false,
           headerTitle:
-            route.name === "courses/index"
+            route.name === "tab1/index"
               ? "Courses"
-              : route.name === "resources/index"
+              : route.name === "tab2/index"
               ? "Video Lessons"
               : "",
           headerTitleStyle: {
