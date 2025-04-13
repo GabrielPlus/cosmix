@@ -23,7 +23,13 @@ export default function Index() {
       {loading ? (
         <></>
       ) : (
-        <Redirect href={!loggedInUser ? "/(routes)/onboarding" : "/(tabs)/index"} />
+        <Redirect
+          href={{
+            pathname: !loggedInUser
+              ? "/(routes)/onboarding"
+              : "/",
+          }}
+        />
       )}
     </>
   );
