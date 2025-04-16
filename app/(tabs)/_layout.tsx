@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { useTheme } from "@/context/theme.context";
 import { Tabs } from "expo-router";
-import { Feather, Ionicons, Octicons } from "@expo/vector-icons";
+import { Feather, FontAwesome5, Ionicons, MaterialCommunityIcons, MaterialIcons, Octicons } from "@expo/vector-icons";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { fontSizes, IsAndroid, IsIOS, IsIPAD } from "@/themes/app.constant";
 
@@ -24,19 +24,10 @@ export default function _layout() {
                   color={color}
                 />
               );
-            } else if (route.name === "tab1/index") {
-              iconName = (
-                <Feather
-                  name="search"
-                  size={moderateScale(24)}
-                  style={{ width: IsIPAD ? scale(20) : "auto" }}
-                  color={color}
-                />
-              );
             } else if (route.name === "tab2/index") {
               iconName = (
-                <Feather
-                  name="scissors"
+                <MaterialCommunityIcons
+                  name="face-woman-shimmer"
                   size={moderateScale(24)}
                   style={{ width: IsIPAD ? scale(20) : "auto" }}
                   color={color}
@@ -57,14 +48,14 @@ export default function _layout() {
           tabBarActiveTintColor: theme.colors ? "#fff" : "#f58d42",
           tabBarInactiveTintColor: theme.dark ? "#000" : "#000",
           headerShown:
-            route.name === "tab1/index" || route.name === "tab2/index"
+            route.name === "tab3/index" || route.name === "tab2/index"
               ? true
               : false,
           headerTitle:
-            route.name === "tab1/index"
-              ? "spa"
+            route.name === "tab3/index"
+              ? "profile"
               : route.name === "tab2/index"
-              ? "massage"
+              ? "massaaage"
               : "",
           headerTitleStyle: {
             color: theme.dark ? "#fff" : "#000",
@@ -102,7 +93,7 @@ export default function _layout() {
               ? scale(20)
               : scale(35),
             borderTopWidth: 0,
-            height: verticalScale(55),
+            height: verticalScale(50),
           },
           tabBarBackground: () => {
             return (
@@ -158,7 +149,6 @@ export default function _layout() {
       }}
     >
       <Tabs.Screen name="index" />
-      <Tabs.Screen name="tab1/index" />
       <Tabs.Screen name="tab2/index" />
       <Tabs.Screen name="tab3/index" />
     </Tabs>

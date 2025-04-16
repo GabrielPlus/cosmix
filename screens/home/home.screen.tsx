@@ -1,9 +1,10 @@
-import { View, Text, Pressable } from 'react-native';
+import { View, Text, Pressable, ScrollView } from 'react-native';
 import React, { useState } from 'react';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from '@/context/theme.context';
 import WelcomeHeader from '@/components/home/welcome.header';
-import { scale } from 'react-native-size-matters';
+import HomeBanner from "@/components/home/home.banner";
+
 
 
 
@@ -26,6 +27,9 @@ export default function HomeScreen() {
                 }}
             >
                 <WelcomeHeader />
+                <ScrollView showsVerticalScrollIndicator={false}>
+                    <HomeBanner />
+                </ScrollView>
                 </LinearGradient>
 
         </>

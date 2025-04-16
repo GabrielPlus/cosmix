@@ -1,10 +1,10 @@
-import { View, StyleSheet, Text, Pressable, StatusBar } from 'react-native'
+import { View, StyleSheet, Text, Pressable, StatusBar, TextInput } from 'react-native'
 import React, { useState } from 'react'
 import { useTheme } from '@/context/theme.context'
 import { LinearGradient } from 'expo-linear-gradient';
 import { fontSizes, IsAndroid, IsHaveNotch, IsIPAD, windowHeight, windowWidth } from '@/themes/app.constant';
 import { moderateScale, scale, verticalScale } from 'react-native-size-matters';
-import { Ionicons } from '@expo/vector-icons';
+import { EvilIcons, Ionicons } from '@expo/vector-icons';
 
 export default function WelcomeHeader() {
     const { theme } = useTheme();
@@ -32,9 +32,19 @@ export default function WelcomeHeader() {
                         color: "#fff",
                         fontFamily: "Poppins_600SemiBold",
                     }}>
-                        Hi Pius
+                        Hi Joel,
+                    </Text>
+                    <Text
+                        style={{
+                            fontSize: fontSizes.FONT22,
+                            color: "#fff",
+                            fontFamily: "Poppins_400Regular",
+                        }}
+                    >
+                        Serenity starts here.
                     </Text>
                 </View>
+                <View style={{flexDirection:"row",}}>
                 <Pressable>
                     <View style={[styles.notificationWrapper, {
                         backgroundColor: theme.dark ? "transparent" : "#f58d42",
@@ -61,6 +71,26 @@ export default function WelcomeHeader() {
                         </View>
                     </View>
                 </Pressable>
+                </View>
+            </View>
+            <View style={{position:"relative"}}>
+                <TextInput
+                placeholder="Search for treatments..."
+                style={[styles.input]}
+                />
+                <Pressable
+          style={{
+            position: "absolute",
+            right: windowWidth(10),
+            top: windowHeight(20),
+          }}
+        >
+          <EvilIcons
+            name="search"
+            size={IsIPAD ? scale(20) : scale(30)}
+            color={theme.dark ? "#000": "#000"}
+          />
+        </Pressable>
             </View>
         </LinearGradient>
     )
@@ -95,5 +125,15 @@ const styles = StyleSheet.create({
         borderRadius: scale(10),
         alignItems: "center",
         justifyContent: "center",
-    }
+    },
+    input: {
+        height: IsHaveNotch ? verticalScale(35) : verticalScale(40),
+        backgroundColor: "#fff",
+        color: "#000",
+        marginTop: verticalScale(12),
+        fontSize: IsIPAD ? fontSizes.FONT15 : fontSizes.FONT18,
+        borderRadius: moderateScale(30),
+        paddingHorizontal: moderateScale(15),
+        fontFamily: "Poppins_400Regular",
+      },
 })
