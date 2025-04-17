@@ -2,7 +2,7 @@ import { View, Text, StyleSheet } from "react-native";
 import React from "react";
 import { useTheme } from "@/context/theme.context";
 import { Tabs } from "expo-router";
-import { Feather, FontAwesome5, Ionicons, MaterialCommunityIcons, MaterialIcons, Octicons } from "@expo/vector-icons";
+import { Feather, MaterialCommunityIcons, MaterialIcons, Octicons } from "@expo/vector-icons";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { fontSizes, IsAndroid, IsIOS, IsIPAD } from "@/themes/app.constant";
 
@@ -26,8 +26,8 @@ export default function _layout() {
               );
             } else if (route.name === "tab2/index") {
               iconName = (
-                <MaterialCommunityIcons
-                  name="face-woman-shimmer"
+                <MaterialIcons
+                  name="search"
                   size={moderateScale(24)}
                   style={{ width: IsIPAD ? scale(20) : "auto" }}
                   color={color}
@@ -45,8 +45,8 @@ export default function _layout() {
             }
             return iconName;
           },
-          tabBarActiveTintColor: theme.colors ? "#fff" : "#f58d42",
-          tabBarInactiveTintColor: theme.dark ? "#000" : "#000",
+          tabBarActiveTintColor: "#000000", 
+          tabBarInactiveTintColor: "#fff", 
           headerShown:
             route.name === "tab3/index" || route.name === "tab2/index"
               ? true
@@ -55,7 +55,7 @@ export default function _layout() {
             route.name === "tab3/index"
               ? "profile"
               : route.name === "tab2/index"
-              ? "massaaage"
+              ? "massaage"
               : "",
           headerTitleStyle: {
             color: theme.dark ? "#fff" : "#000",
@@ -74,7 +74,6 @@ export default function _layout() {
           },
           headerBackground: () => (
             <View
-              
               style={{
                 borderTopLeftRadius: scale(20),
                 borderTopRightRadius: scale(20),
@@ -83,7 +82,7 @@ export default function _layout() {
               }}
             />
           ),
-          tabBarShowLabel: false,
+          tabBarShowLabel: false, 
           tabBarStyle: {
             position: IsIOS ? (theme.dark ? "absolute" : "static") : "absolute",
             borderTopLeftRadius: IsAndroid ? 0 : IsIPAD ? scale(20) : scale(35),
@@ -93,7 +92,8 @@ export default function _layout() {
               ? scale(20)
               : scale(35),
             borderTopWidth: 0,
-            height: verticalScale(50),
+            height: verticalScale(60), 
+            backgroundColor: "#F58D42", 
           },
           tabBarBackground: () => {
             return (
@@ -102,7 +102,7 @@ export default function _layout() {
                   <View
                     style={{
                       ...StyleSheet.absoluteFillObject,
-                      backgroundColor: "#f58d42",
+                      backgroundColor: "#F58D42", 
                       borderTopLeftRadius: IsAndroid
                         ? 0
                         : IsIPAD
@@ -118,7 +118,6 @@ export default function _layout() {
                   />
                 ) : (
                   <View
-                    
                     style={{
                       ...StyleSheet.absoluteFillObject,
                       borderTopLeftRadius: IsAndroid
@@ -134,11 +133,11 @@ export default function _layout() {
                       overflow: "hidden",
                       backgroundColor: IsAndroid
                         ? theme.dark
-                          ? "#f58d42"
-                          : "#f58d42"
+                          ? "#F58D42" 
+                          : "#F58D42"
                         : theme.dark
                         ? "transparent"
-                        : "#f58d42",
+                        : "#F58D42", 
                     }}
                   />
                 )}

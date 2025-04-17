@@ -41,7 +41,8 @@ export default function WelcomeHeader() {
                             fontFamily: "Poppins_400Regular",
                         }}
                     >
-                        Serenity starts here.
+                        Sinulle raätälöidyt hoidot, {"\n"}
+                        täydelliseen hetkeen
                     </Text>
                 </View>
                 <View style={{flexDirection:"row",}}>
