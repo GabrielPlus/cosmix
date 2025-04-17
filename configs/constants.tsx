@@ -73,24 +73,40 @@ export const NEXT = 0;
 export const LEFT_SNAP_POINTS = [MARGIN_WIDTH, PREV];
 export const RIGHT_SNAP_POINTS = [NEXT, WIDTH - MARGIN_WIDTH];
 
-// banner data
-export const bannerData = [
+
+export const categoriesData = [
   {
+    title: "Spa",
     image:
-      "https://res.cloudinary.com/dhedbjqza/image/upload/v1744795675/cjh1l8mmbgjrzkwqnpxm.jpg",
-    url: "",
+      "https://res.cloudinary.com/duwa651xm/image/upload/v1744811778/spa_yog6nx.jpg",
   },
   {
+    title: "Gua Sha hoidot",
     image:
-      "https://res.cloudinary.com/dhedbjqza/image/upload/v1744795535/jsu8zfsdjgdywemxhcpa.jpg",
-    url: "",
+      "https://res.cloudinary.com/duwa651xm/image/upload/v1744812019/Gua_Sha_hoidot_rs4ojt.webp",
   },
   {
+    title: "Ripset",
     image:
-      "https://res.cloudinary.com/dhedbjqza/image/upload/v1744796983/Untitled_design_2_ynz1fr.png",
-    url: "",
+      "https://res.cloudinary.com/duwa651xm/image/upload/v1744812132/ripset_d1mxrc.jpg",
+  },
+  {
+    title: "Meikki",
+    image:
+      "https://res.cloudinary.com/duwa651xm/image/upload/v1744812258/meikki_azvm9y.webp",
+  },
+  {
+    title: "Hieronnat",
+    image:
+      "https://res.cloudinary.com/duwa651xm/image/upload/v1744812340/Hieronnat_oxk7j0.jpg",
+  },
+  {
+    title: "Löydä lisää hoitoja",
+    image: 
+      "https://res.cloudinary.com/duwa651xm/image/upload/v1744812506/woman-washing-head-hairsalon-1-scaled_irxkgc.jpg", 
   },
 ];
+
 
 
 export const NotificationsData = [
