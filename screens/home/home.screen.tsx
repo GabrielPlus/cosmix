@@ -47,7 +47,7 @@ export default function HomeScreen() {
                                     fontFamily: "Poppins_500Medium",
                                     color: theme.dark ? "#000" : "#000"
                                 }}>
-                                    Spa {""}
+                                    Spa {" "}
                                 </Text>
                                 <GradiantText
                                     text="Categories "
@@ -74,7 +74,7 @@ export default function HomeScreen() {
                             color: theme.dark ? "#000" : "#000",
                           }}
                         >
-                          explore our full range of hostilic spa services
+                          Tutustu kokonaisvaltaisiin spa-palveluihimme
                         </Text>
                         </View>
                     </View>

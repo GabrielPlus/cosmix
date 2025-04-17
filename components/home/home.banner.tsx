@@ -189,7 +189,7 @@ const styles = StyleSheet.create({
   },
   sparkle: {
     color: "white",
-    fontSize: scale(24),
+    fontSize: scale(20),
     position: "absolute",
   },
   topLeftSparkle: {
